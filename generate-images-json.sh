@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Make filename matching case-insensitive
+shopt -s nocaseglob
+
 # Define the directory and output file
 IMG_DIR="public/img"
 OUTPUT_FILE="public/images.json"
