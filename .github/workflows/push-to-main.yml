@@ -32,8 +32,8 @@ jobs:
 
       - name: Build with Next.js
         run: |
-          echo "Building with base path: /gfk-staging"
-          NEXT_PUBLIC_BASE_PATH=/gfk-staging npm run build
+          echo "Building with base path: /"
+          NEXT_PUBLIC_BASE_PATH=/ npm run build
           
       - name: Check build output
         run: |
