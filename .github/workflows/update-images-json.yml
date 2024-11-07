@@ -1,0 +1,31 @@
+name: Update Images JSON
+
+on:
+  # Trigger on changes to images in the public/img directory
+  push:
+    paths:
+      - "public/img/**"
+  workflow_dispatch: # Allow manual triggering
+
+jobs:
+  generate-images-json:
+    runs-on: ubuntu-latest
+    steps:
+      # Step 1: Checkout the repository
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      # Step 2: Run the script to generate images.json
+      - name: Run Image Generation Script
+        run: |
+          chmod +x ./generate-images-json.sh
+          ./generate-images-json.sh
+
+      # Step 3: Commit and push the changes
+      - name: Commit Updated images.json
+        run: |
+          git config --global user.name "GitHub Action"
+          git config --global user.email "actions@github.com"
+          git add public/images.json
+          git commit -m "Update images.json with new images" || echo "No changes to commit"
+          git push
