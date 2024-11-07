@@ -4,6 +4,10 @@ on:
   push:
     branches: ["main"]
   workflow_dispatch:
+  workflow_run:
+    workflows: ["Update Images JSON"]  # Name of the workflow to watch
+    types:
+      - completed
 
 permissions:
   contents: read
@@ -33,7 +37,6 @@ jobs:
       - name: Build with Next.js
         run: |
           echo "Building with base path: /"
-          #NEXT_PUBLIC_BASE_PATH=/ npm run build
           npm run build
           
       - name: Check build output
