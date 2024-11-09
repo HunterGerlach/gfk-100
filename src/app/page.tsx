@@ -54,6 +54,33 @@ export default function Home() {
         >
           Upload Photos of Jerry
         </Link>
+
+        <Link 
+          href="./audio/Century of Greatness.mp3" 
+          target="_blank"
+          rel="noopener noreferrer"
+          className="mt-6 bg-white text-red-600 px-8 py-4 text-xl rounded-full shadow-lg font-bold z-10 hover:bg-gray-100 transition-all transform hover:scale-105"
+        >
+          Song 1
+        </Link>
+
+      <Link 
+          href="./audio/Century of Jerry.mp3" 
+        target="_blank"
+        rel="noopener noreferrer"
+        className="mt-6 bg-white text-red-600 px-8 py-4 text-xl rounded-full shadow-lg font-bold z-10 hover:bg-gray-100 transition-all transform hover:scale-105"
+      >
+        Song 2
+      </Link>
+
+      <Link 
+          href="./audio/Great at 100.mp3" 
+        target="_blank"
+        rel="noopener noreferrer"
+        className="mt-6 bg-white text-red-600 px-8 py-4 text-xl rounded-full shadow-lg font-bold z-10 hover:bg-gray-100 transition-all transform hover:scale-105"
+      >
+        Song 3
+      </Link>
       </header>
 
       {/* Spacer to prevent content from being hidden behind the fixed header */}
