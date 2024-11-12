@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import images from "../../public/images.json";
 import { useState, useEffect } from "react";
+import YouTube from './components/youtube'; 
 
 function shuffleArray(array: string[]) {
   return array
@@ -83,6 +84,10 @@ export default function Home() {
       </Link>
       </header>
 
+      {/* Spacer to prevent content from being hidden behind the fixed header */}
+      <div className="h-0"></div>
+
+      <YouTube videoId="fomQvLIlfPc" />
       {/* Spacer to prevent content from being hidden behind the fixed header */}
       <div className="h-0"></div>
 
